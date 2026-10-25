@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment 3 - Catalogue Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; }
+        h2 { color: #1e3c72; text-align: center; margin-bottom: 20px; }
+        table { width: 90%; margin: 0 auto; border-collapse: collapse; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #dee2e6; padding: 12px; text-align: center; vertical-align: middle; }
+        th { background-color: #1e3c72; color: white; }
+        .book-img { width: 70px; height: 90px; background: #e2e8f0; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; color: #555; border: 1px dashed #999; }
+        .btn-add { background-color: #007bff; color: white; border: none; padding: 8px 14px; border-radius: 4px; cursor: pointer; }
+        .btn-add:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <h2>Books Catalogue - Computer Science & Engineering</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cover Page</th>
+                <th>Book & Author Name</th>
+                <th>Publisher</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><div class="book-img">Cover 1</div></td>
+                <td><b>Core Java: An Integrated Approach</b><br><small>Author: R. Nageswara Rao</small></td>
+                <td>Dreamtech Press</td>
+                <td>₹650.00</td>
+                <td><button class="btn-add">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><div class="book-img">Cover 2</div></td>
+                <td><b>Data Structures and Algorithms in C++</b><br><small>Author: Adam Drozdek</small></td>
+                <td>Cengage Learning</td>
+                <td>₹720.00</td>
+                <td><button class="btn-add">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><div class="book-img">Cover 3</div></td>
+                <td><b>Operating System Concepts</b><br><small>Author: Silberschatz, Galvin</small></td>
+                <td>Wiley India</td>
+                <td>₹850.00</td>
+                <td><button class="btn-add">Add to Cart</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
