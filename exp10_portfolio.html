@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio - Web Technology Lab</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; line-height: 1.6; }
+
+        header { background: #1e293b; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #334155; }
+        .logo { font-size: 20px; font-weight: bold; color: #38bdf8; }
+        nav a { color: #94a3b8; text-decoration: none; margin-left: 20px; font-weight: 500; }
+        nav a:hover { color: #38bdf8; }
+
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+
+        .hero { text-align: center; padding: 50px 0; border-bottom: 1px solid #334155; }
+        .hero h1 { font-size: 36px; margin-bottom: 10px; color: #f8fafc; }
+        .hero p { color: #38bdf8; font-size: 18px; margin-bottom: 20px; }
+
+        .section-title { color: #38bdf8; margin: 30px 0 15px 0; border-bottom: 2px solid #334155; padding-bottom: 5px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: #1e293b; padding: 20px; border-radius: 8px; border: 1px solid #334155; }
+        .card h3 { color: #f8fafc; margin-bottom: 10px; }
+        .card p { color: #94a3b8; font-size: 14px; }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 10px; margin-bottom: 10px; background: #1e293b; border: 1px solid #334155; color: white; border-radius: 4px;
+        }
+        .btn-send { background: #38bdf8; color: #0f172a; padding: 10px 20px; border: none; font-weight: bold; border-radius: 4px; cursor: pointer; }
+
+        footer { text-align: center; padding: 20px; color: #64748b; font-size: 13px; margin-top: 40px; border-top: 1px solid #334155; }
+    </style>
+    <script>
+        function handleContact(e) {
+            e.preventDefault();
+            alert("Thank you for getting in touch! Your message has been received.");
+            document.getElementById("portfolioForm").reset();
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">&lt;Student Dev /&gt;</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="hero" id="about">
+            <h1>Engineering Student & Developer</h1>
+            <p>B.Tech Computer Science & Engineering</p>
+            <span style="color: #94a3b8;">Passionate about Data Structures, Web Technologies, and Software Development.</span>
+        </section>
+
+        <h2 class="section-title" id="skills">Technical Skills</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Languages</h3>
+                <p>C++, Java, JavaScript, HTML5, CSS3</p>
+            </div>
+            <div class="card">
+                <h3>Developer Tools</h3>
+                <p>Git, GitHub, VS Code, IntelliJ IDEA</p>
+            </div>
+            <div class="card">
+                <h3>Web Concepts</h3>
+                <p>Responsive Design, DOM Manipulation, JS Validation</p>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="projects">Academic Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Online Book Store Web App</h3>
+                <p>Static bookstore prototype featuring department catalogues, interactive shopping cart, and JavaScript registration validation.</p>
+            </div>
+            <div class="card">
+                <h3>Krishi Nexus Platform</h3>
+                <p>Agricultural digital platform mini-project built to connect rural workers with equipment services and wallet interfaces.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="contact">Get In Touch</h2>
+        <form class="contact-form" id="portfolioForm" onsubmit="handleContact(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn-send">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; CSE Web Technology Practical File Experiment</p>
+    </footer>
+
+</body>
+</html>
