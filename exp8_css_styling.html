@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment 8 - CSS Styling & Backgrounds</title>
+    <style>
+        /* Body Selector with Background Image */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+            margin: 0;
+            padding: 40px;
+        }
+
+        /* Heading Selectors */
+        h1 { color: #1e3c72; font-family: 'Georgia', serif; text-align: center; }
+        p { font-size: 16px; color: #475569; line-height: 1.6; }
+
+        /* Card Element with Custom Background Pattern */
+        .styled-card {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 10px;
+            color: #ffffff;
+            /* Gradient Background on single element */
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .highlight-text {
+            font-style: italic;
+            font-weight: bold;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Style Selectors & Background Demonstration</h1>
+
+    <div class="styled-card">
+        <h2>Custom Container Style</h2>
+        <p>This container demonstrates setting custom fonts, text colors, gradients, and <span class="highlight-text">highlighted CSS classes</span> inside individual elements.</p>
+    </div>
+
+</body>
+</html>
