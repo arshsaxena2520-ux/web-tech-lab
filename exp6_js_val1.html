@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment 6 - JS Validation Part 1</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 30px; }
+        .box { width: 400px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 6px; }
+        .field { margin-bottom: 15px; }
+        .field label { display: block; font-weight: bold; }
+        .field input { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+        .error { color: red; font-size: 13px; }
+    </style>
+    <script>
+        function validateForm1() {
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            var nameRegex = /^[A-Za-z\s]+$/;
+
+            // Name Validation: Alphabets only, minimum 6 characters
+            if (!nameRegex.test(name) || name.length < 6) {
+                alert("Validation Error: Name must contain alphabets only and be at least 6 characters long.");
+                return false;
+            }
+
+            // Password Validation: Minimum 6 characters
+            if (password.length < 6) {
+                alert("Validation Error: Password must be at least 6 characters long.");
+                return false;
+            }
+
+            alert("Name & Password Validation Passed!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="box">
+        <h3>JS Validation (Name & Password)</h3>
+        <form onsubmit="return validateForm1()">
+            <div class="field">
+                <label>Name:</label>
+                <input type="text" id="name" placeholder="Min 6 alphabets">
+            </div>
+            <div class="field">
+                <label>Password:</label>
+                <input type="password" id="password" placeholder="Min 6 characters">
+            </div>
+            <input type="submit" value="Validate Form">
+        </form>
+    </div>
+
+</body>
+</html>
