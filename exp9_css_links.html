@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment 9 - CSS Repeat & Link Pseudo-Classes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f8fafc;
+            /* Background Repeat Control Demonstration */
+            background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px);
+            background-size: 40px 100%;
+            background-repeat: repeat-x; /* Repeats horizontally only */
+        }
+
+        .demo-box {
+            background: white; padding: 25px; max-width: 600px;
+            margin: 0 auto; border: 1px solid #cbd5e1; border-radius: 8px;
+        }
+
+        /* --- CSS Link Pseudo-classes --- */
+        /* Unvisited Link */
+        a:link {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Visited Link */
+        a:visited {
+            color: #663399;
+        }
+
+        /* Hover State */
+        a:hover {
+            color: #ff4500;
+            text-decoration: underline;
+        }
+
+        /* Active State (while clicking) */
+        a:active {
+            color: #008000;
+            background-color: #ffff99;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="demo-box">
+        <h2>CSS Link States & Repeat Property</h2>
+        <p>Click and test the interactive link states below:</p>
+        <br>
+        <ul>
+            <li><a href="https://www.google.com" target="_blank">External Resource Link (Google)</a></li>
+            <li><a href="#exp1">Internal Experiment Section Anchor</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
