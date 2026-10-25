@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment 7 - JS Validation Part 2</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 30px; }
+        .box { width: 400px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 6px; }
+        .field { margin-bottom: 15px; }
+        .field label { display: block; font-weight: bold; }
+        .field input { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+    </style>
+    <script>
+        function validateForm2() {
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            
+            // Standard Email Regex Pattern
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            // Phone Regex: Exactly 10 digits
+            var phoneRegex = /^[0-9]{10}$/;
+
+            if (!emailRegex.test(email)) {
+                alert("Invalid Email Format! Must follow standard pattern (e.g., student@domain.com)");
+                return false;
+            }
+
+            if (!phoneRegex.test(phone)) {
+                alert("Invalid Phone Number! Must contain exactly 10 numeric digits.");
+                return false;
+            }
+
+            alert("Email & Phone Number Validation Passed!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="box">
+        <h3>JS Validation (Email & Phone)</h3>
+        <form onsubmit="return validateForm2()">
+            <div class="field">
+                <label>E-mail Id:</label>
+                <input type="text" id="email" placeholder="user@domain.com">
+            </div>
+            <div class="field">
+                <label>Phone Number:</label>
+                <input type="text" id="phone" placeholder="10 digit number">
+            </div>
+            <input type="submit" value="Validate Contact Info">
+        </form>
+    </div>
+
+</body>
+</html>
