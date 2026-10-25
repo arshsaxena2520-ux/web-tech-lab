@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment 5 - Registration Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; padding: 20px; }
+        .inst-header { background: #1e3c72; color: white; text-align: center; padding: 12px; margin-bottom: 20px; border-radius: 6px; }
+        .form-container { width: 550px; margin: 0 auto; background: white; padding: 25px; border-radius: 8px; border: 1px solid #ddd; }
+        .form-row { margin-bottom: 15px; }
+        .form-row label { display: block; font-weight: bold; margin-bottom: 5px; }
+        .form-row input[type="text"], .form-row input[type="password"], .form-row select, .form-row textarea {
+            width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+        }
+        .inline-group { display: flex; gap: 15px; }
+        .btn-submit { background: #1e3c72; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; }
+    </style>
+</head>
+<body>
+
+    <div class="inst-header">
+        <h3>GL BAJAJ Institute of Technology & Management</h3>
+        <p><small>[Approved by AICTE, Govt. of India & Affiliated to Dr. APJ Abdul Kalam Technical University, Lucknow, U.P., India]</small></p>
+        <p><b>Department Of Computer Science & Engineering</b></p>
+    </div>
+
+    <div class="form-container">
+        <h2 style="text-align: center; margin-bottom: 20px;">Student Registration</h2>
+        <form>
+            <div class="form-row">
+                <label>1) Name:</label>
+                <input type="text" name="fullname">
+            </div>
+
+            <div class="form-row">
+                <label>2) Password:</label>
+                <input type="password" name="userpass">
+            </div>
+
+            <div class="form-row">
+                <label>3) E-mail Id:</label>
+                <input type="text" name="email">
+            </div>
+
+            <div class="form-row">
+                <label>4) Phone Number:</label>
+                <input type="text" name="phone">
+            </div>
+
+            <div class="form-row">
+                <label>5) Sex:</label>
+                <input type="radio" name="sex" value="Male"> Male
+                <input type="radio" name="sex" value="Female"> Female
+            </div>
+
+            <div class="form-row">
+                <label>6) Date of Birth:</label>
+                <select name="dob_day">
+                    <option value="">Day</option>
+                    <option value="1">01</option><option value="15">15</option><option value="22">22</option>
+                </select>
+                <select name="dob_month">
+                    <option value="">Month</option>
+                    <option value="Jan">Jan</option><option value="Mar">Mar</option><option value="Aug">Aug</option>
+                </select>
+                <select name="dob_year">
+                    <option value="">Year</option>
+                    <option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label>7) Languages Known:</label>
+                <input type="checkbox" name="lang" value="English"> English
+                <input type="checkbox" name="lang" value="Telugu"> Telugu
+                <input type="checkbox" name="lang" value="Hindi"> Hindi
+                <input type="checkbox" name="lang" value="Tamil"> Tamil
+            </div>
+
+            <div class="form-row">
+                <label>8) Address:</label>
+                <textarea rows="4" name="address"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Register Now</button>
+        </form>
+    </div>
+
+</body>
+</html>
